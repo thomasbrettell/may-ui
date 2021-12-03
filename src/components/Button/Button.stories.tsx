@@ -1,4 +1,4 @@
-import Button from '../components/Button';
+import Button from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const ButtonStory = {
@@ -26,6 +26,18 @@ export const Tertiary = Template.bind({});
 Tertiary.args = {
   children: 'Tertiary',
   variant: 'tertiary',
+};
+
+export const Warning = Template.bind({});
+Warning.args = {
+  children: 'Warning',
+  variant: 'warning',
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  children: 'Danger',
+  variant: 'danger',
 };
 
 export default ButtonStory;

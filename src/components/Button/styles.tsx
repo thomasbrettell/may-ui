@@ -11,6 +11,14 @@ export const Button = styled.button<ButtonProps>`
   font-weight: bold;
   padding: 8px 16px;
   border: none;
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 
   ${(props) =>
     props.variant === 'primary' &&
@@ -20,12 +28,10 @@ export const Button = styled.button<ButtonProps>`
 
       &:hover {
         background-color: ${defaultTheme.colors.purple[70]};
-        cursor: pointer;
       }
 
       &:disabled {
         background-color: ${defaultTheme.colors.purple[20]};
-        cursor: not-allowed;
       }
 
       &:focus {
@@ -48,13 +54,11 @@ export const Button = styled.button<ButtonProps>`
 
       &:hover {
         background-color: ${defaultTheme.colors.neutral[60]};
-        cursor: pointer;
       }
 
       &:disabled {
         background-color: ${defaultTheme.colors.neutral[50]};
         color: ${defaultTheme.colors.ink[30]};
-        cursor: not-allowed;
       }
 
       &:focus {
@@ -80,13 +84,11 @@ ${(props) =>
       &:hover {
         background-color: #EFEFEF;
         color: ${defaultTheme.colors.purple[70]};
-        cursor: pointer;
       }
 
       &:disabled {
         background: none;
         color: ${defaultTheme.colors.purple[20]};
-        cursor: not-allowed;
       }
 
       &:focus {
@@ -97,6 +99,45 @@ ${(props) =>
       &:active {
         color: ${defaultTheme.colors.purple[90]};
         background-color: ${defaultTheme.colors.purple[10]};
+      }
+  `}
+
+  ${(props) =>
+    props.variant === 'warning' &&
+    `
+      background-color: ${defaultTheme.colors.yellow[50]};
+      color: ${defaultTheme.colors.ink[50]};
+
+      &:hover {
+        background-color: ${defaultTheme.colors.yellow[70]};
+      }
+
+      &:disabled {
+        background-color: ${defaultTheme.colors.yellow[20]};
+        color: ${defaultTheme.colors.ink[40]};
+      }
+
+      &:focus {
+        outline: 3px solid ${defaultTheme.colors.yellow[20]};
+      }
+  `}
+
+  ${(props) =>
+    props.variant === 'danger' &&
+    `
+      background-color: ${defaultTheme.colors.red[50]};
+      color: ${defaultTheme.colors.neutral.white};
+
+      &:hover {
+        background-color: ${defaultTheme.colors.red[70]};
+      }
+
+      &:disabled {
+        background-color: ${defaultTheme.colors.red[20]};
+      }
+
+      &:focus {
+        outline: 3px solid ${defaultTheme.colors.red[20]};
       }
   `}
 `;

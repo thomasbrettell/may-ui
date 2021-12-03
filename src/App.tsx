@@ -1,24 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+import ChevronDown from './components/Icons/ChevronDown';
+import CaretDown from './components/Icons/CaretDown';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button variant='warning'>Default</Button>
+      <ChevronDown size='lg' />
+      <CaretDown />
     </div>
   );
 }
