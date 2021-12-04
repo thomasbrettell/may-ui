@@ -1,4 +1,4 @@
-import Button from '.';
+import Button from './Button';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const ButtonStory = {

@@ -1,12 +1,14 @@
-import defaultTheme from "../../../themes/default";
+import { ThemeContext } from 'styled-components';
+import { useContext } from 'react';
 import { IconProps } from "../types";
 
 const ChevronDown = ({size = 'md'}: IconProps) => {
+  const theme = useContext(ThemeContext)
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={defaultTheme.size.icon[size]}
-      height={defaultTheme.size.icon[size]}
+      width={theme.size.icon[size]}
+      height={theme.size.icon[size]}
       fill="none"
       viewBox="0 0 24 24"
     >

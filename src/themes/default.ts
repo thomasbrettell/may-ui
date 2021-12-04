@@ -1,4 +1,6 @@
-const defaultTheme = {
+import { DefaultTheme } from 'styled-components';
+
+const defaultTheme: DefaultTheme = {
   colors: {
     purple: {
       90: '#001EA9',

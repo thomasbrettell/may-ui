@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { ButtonProps } from './types';
-import defaultTheme from '../../themes/default';
 
 export const Button = styled.button<ButtonProps>`
   line-height: 133.33333333333333%;
@@ -23,52 +22,52 @@ export const Button = styled.button<ButtonProps>`
   ${(props) =>
     props.variant === 'primary' &&
     `
-      background-color: ${defaultTheme.colors.purple[50]};
-      color: ${defaultTheme.colors.neutral.white};
+      background-color: ${props.theme.colors.purple[50]};
+      color: ${props.theme.neutral.white};
 
       &:hover {
-        background-color: ${defaultTheme.colors.purple[70]};
+        background-color: ${props.theme.purple[70]};
       }
 
       &:disabled {
-        background-color: ${defaultTheme.colors.purple[20]};
+        background-color: ${props.theme.purple[20]};
       }
 
       &:focus {
-        background-color: ${defaultTheme.colors.purple[70]};
-        outline: 3px solid ${defaultTheme.colors.purple[10]};
+        background-color: ${props.theme.purple[70]};
+        outline: 3px solid ${props.theme.purple[10]};
       }
 
       &:active {
-        background-color: ${defaultTheme.colors.purple[90]};
+        background-color: ${props.theme.purple[90]};
       }
   `}
 
   ${(props) =>
     props.variant === 'secondary' &&
     `
-      background-color: ${defaultTheme.colors.neutral[50]};
-      color: ${defaultTheme.colors.ink[50]};
+      background-color: ${props.theme.neutral[50]};
+      color: ${props.theme.ink[50]};
       font-size: 12px;
       font-weight: bold;
 
       &:hover {
-        background-color: ${defaultTheme.colors.neutral[60]};
+        background-color: ${props.theme.neutral[60]};
       }
 
       &:disabled {
-        background-color: ${defaultTheme.colors.neutral[50]};
-        color: ${defaultTheme.colors.ink[30]};
+        background-color: ${props.theme.theme.neutral[50]};
+        color: ${props.theme.theme.ink[30]};
       }
 
       &:focus {
-        background-color: ${defaultTheme.colors.neutral[50]};
-        outline: 3px solid ${defaultTheme.colors.purple[10]};
+        background-color: ${props.theme.colors.neutral[50]};
+        outline: 3px solid ${props.theme.colors.purple[10]};
       }
 
       &:active {
-        color: ${defaultTheme.colors.ink[60]};
-        background-color: ${defaultTheme.colors.neutral[70]};
+        color: ${props.theme.colors.ink[60]};
+        background-color: ${props.theme.colors.neutral[70]};
       }
   `}
 
@@ -77,67 +76,67 @@ ${(props) =>
     `
       padding: 8px 16px;
       background: none;
-      color: ${defaultTheme.colors.purple[50]};
+      color: ${props.theme.colors.purple[50]};
       font-size: 12px;
       font-weight: bold;
 
       &:hover {
         background-color: #EFEFEF;
-        color: ${defaultTheme.colors.purple[70]};
+        color: ${props.theme.colors.purple[70]};
       }
 
       &:disabled {
         background: none;
-        color: ${defaultTheme.colors.purple[20]};
+        color: ${props.theme.colors.purple[20]};
       }
 
       &:focus {
-        color: ${defaultTheme.colors.purple[70]};
-        outline: 3px solid ${defaultTheme.colors.purple[10]};
+        color: ${props.theme.colors.purple[70]};
+        outline: 3px solid ${props.theme.colors.purple[10]};
       }
 
       &:active {
-        color: ${defaultTheme.colors.purple[90]};
-        background-color: ${defaultTheme.colors.purple[10]};
+        color: ${props.theme.colors.purple[90]};
+        background-color: ${props.theme.colors.purple[10]};
       }
   `}
 
   ${(props) =>
     props.variant === 'warning' &&
     `
-      background-color: ${defaultTheme.colors.yellow[50]};
-      color: ${defaultTheme.colors.ink[50]};
+      background-color: ${props.theme.colors.yellow[50]};
+      color: ${props.theme.colors.ink[50]};
 
       &:hover {
-        background-color: ${defaultTheme.colors.yellow[70]};
+        background-color: ${props.theme.colors.yellow[70]};
       }
 
       &:disabled {
-        background-color: ${defaultTheme.colors.yellow[20]};
-        color: ${defaultTheme.colors.ink[40]};
+        background-color: ${props.theme.colors.yellow[20]};
+        color: ${props.theme.colors.ink[40]};
       }
 
       &:focus {
-        outline: 3px solid ${defaultTheme.colors.yellow[20]};
+        outline: 3px solid ${props.theme.colors.yellow[20]};
       }
   `}
 
   ${(props) =>
     props.variant === 'danger' &&
     `
-      background-color: ${defaultTheme.colors.red[50]};
-      color: ${defaultTheme.colors.neutral.white};
+      background-color: ${props.theme.colors.red[50]};
+      color: ${props.theme.colors.neutral.white};
 
       &:hover {
-        background-color: ${defaultTheme.colors.red[70]};
+        background-color: ${props.theme.colors.red[70]};
       }
 
       &:disabled {
-        background-color: ${defaultTheme.colors.red[20]};
+        background-color: ${props.theme.colors.red[20]};
       }
 
       &:focus {
-        outline: 3px solid ${defaultTheme.colors.red[20]};
+        outline: 3px solid ${props.theme.colors.red[20]};
       }
   `}
 `;
