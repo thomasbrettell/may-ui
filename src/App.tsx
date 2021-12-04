@@ -5,7 +5,7 @@ import ChevronDown from './components/Icons/ChevronDown';
 function App() {
   return (
     <div className="App">
-      <Button variant='warning'>Default</Button>
+      <Button variant='secondary'>Default</Button>
       <ChevronDown size='lg' />
     </div>
   );

@@ -10,7 +10,7 @@ export const Button = styled.button<ButtonProps>`
   font-weight: bold;
   padding: 8px 16px;
   border: none;
-  
+
   &:hover {
     cursor: pointer;
   }
@@ -19,124 +19,119 @@ export const Button = styled.button<ButtonProps>`
     cursor: not-allowed;
   }
 
-  ${(props) =>
-    props.variant === 'primary' &&
-    `
-      background-color: ${props.theme.colors.purple[50]};
-      color: ${props.theme.neutral.white};
+  ${(props) => {
+    switch (props.variant) {
+      case 'primary':
+        return `
+          background-color: ${props.theme.colors.purple[50]};
+          color: ${props.theme.colors.neutral.white};
 
-      &:hover {
-        background-color: ${props.theme.purple[70]};
-      }
+          &:hover {
+            background-color: ${props.theme.colors.purple[70]};
+          }
 
-      &:disabled {
-        background-color: ${props.theme.purple[20]};
-      }
+          &:disabled {
+            background-color: ${props.theme.colors.purple[20]};
+          }
 
-      &:focus {
-        background-color: ${props.theme.purple[70]};
-        outline: 3px solid ${props.theme.purple[10]};
-      }
+          &:focus {
+            background-color: ${props.theme.colors.purple[70]};
+            outline: 3px solid ${props.theme.colors.purple[10]};
+          }
 
-      &:active {
-        background-color: ${props.theme.purple[90]};
-      }
-  `}
+          &:active {
+            background-color: ${props.theme.colors.purple[90]};
+          }
+        `;
+      case 'secondary':
+        return `
+          background-color: ${props.theme.colors.neutral[50]};
+          color: ${props.theme.colors.ink[50]};
+          font-size: 12px;
+          font-weight: bold;
 
-  ${(props) =>
-    props.variant === 'secondary' &&
-    `
-      background-color: ${props.theme.neutral[50]};
-      color: ${props.theme.ink[50]};
-      font-size: 12px;
-      font-weight: bold;
+          &:hover {
+            background-color: ${props.theme.colors.neutral[60]};
+          }
 
-      &:hover {
-        background-color: ${props.theme.neutral[60]};
-      }
+          &:disabled {
+            background-color: ${props.theme.colors.neutral[50]};
+            color: ${props.theme.colors.ink[30]};
+          }
 
-      &:disabled {
-        background-color: ${props.theme.theme.neutral[50]};
-        color: ${props.theme.theme.ink[30]};
-      }
+          &:focus {
+            background-color: ${props.theme.colors.neutral[50]};
+            outline: 3px solid ${props.theme.colors.purple[10]};
+          }
 
-      &:focus {
-        background-color: ${props.theme.colors.neutral[50]};
-        outline: 3px solid ${props.theme.colors.purple[10]};
-      }
+          &:active {
+            color: ${props.theme.colors.ink[60]};
+            background-color: ${props.theme.colors.neutral[70]};
+          }
+        `;
+      case 'tertiary':
+        return `
+          padding: 8px 16px;
+          background: none;
+          color: ${props.theme.colors.purple[50]};
+          font-size: 12px;
+          font-weight: bold;
 
-      &:active {
-        color: ${props.theme.colors.ink[60]};
-        background-color: ${props.theme.colors.neutral[70]};
-      }
-  `}
+          &:hover {
+            background-color: #EFEFEF;
+            color: ${props.theme.colors.purple[70]};
+          }
 
-${(props) =>
-    props.variant === 'tertiary' &&
-    `
-      padding: 8px 16px;
-      background: none;
-      color: ${props.theme.colors.purple[50]};
-      font-size: 12px;
-      font-weight: bold;
+          &:disabled {
+            background: none;
+            color: ${props.theme.colors.purple[20]};
+          }
 
-      &:hover {
-        background-color: #EFEFEF;
-        color: ${props.theme.colors.purple[70]};
-      }
+          &:focus {
+            color: ${props.theme.colors.purple[70]};
+            outline: 3px solid ${props.theme.colors.purple[10]};
+          }
 
-      &:disabled {
-        background: none;
-        color: ${props.theme.colors.purple[20]};
-      }
+          &:active {
+            color: ${props.theme.colors.purple[90]};
+            background-color: ${props.theme.colors.purple[10]};
+          }
+        `;
+      case 'warning':
+        return `
+          background-color: ${props.theme.colors.yellow[50]};
+          color: ${props.theme.colors.ink[50]};
 
-      &:focus {
-        color: ${props.theme.colors.purple[70]};
-        outline: 3px solid ${props.theme.colors.purple[10]};
-      }
+          &:hover {
+            background-color: ${props.theme.colors.yellow[70]};
+          }
 
-      &:active {
-        color: ${props.theme.colors.purple[90]};
-        background-color: ${props.theme.colors.purple[10]};
-      }
-  `}
+          &:disabled {
+            background-color: ${props.theme.colors.yellow[20]};
+            color: ${props.theme.colors.ink[40]};
+          }
 
-  ${(props) =>
-    props.variant === 'warning' &&
-    `
-      background-color: ${props.theme.colors.yellow[50]};
-      color: ${props.theme.colors.ink[50]};
+          &:focus {
+            outline: 3px solid ${props.theme.colors.yellow[20]};
+          }
+        `;
+      case 'danger':
+        return `
+          background-color: ${props.theme.colors.red[50]};
+          color: ${props.theme.colors.neutral.white};
 
-      &:hover {
-        background-color: ${props.theme.colors.yellow[70]};
-      }
+          &:hover {
+            background-color: ${props.theme.colors.red[70]};
+          }
 
-      &:disabled {
-        background-color: ${props.theme.colors.yellow[20]};
-        color: ${props.theme.colors.ink[40]};
-      }
+          &:disabled {
+            background-color: ${props.theme.colors.red[20]};
+          }
 
-      &:focus {
-        outline: 3px solid ${props.theme.colors.yellow[20]};
-      }
-  `}
-
-  ${(props) =>
-    props.variant === 'danger' &&
-    `
-      background-color: ${props.theme.colors.red[50]};
-      color: ${props.theme.colors.neutral.white};
-
-      &:hover {
-        background-color: ${props.theme.colors.red[70]};
-      }
-
-      &:disabled {
-        background-color: ${props.theme.colors.red[20]};
-      }
-
-      &:focus {
-        outline: 3px solid ${props.theme.colors.red[20]};
-      }
-  `}
+          &:focus {
+            outline: 3px solid ${props.theme.colors.red[20]};
+          }
+      `;
+    }
+  }}
 `;
