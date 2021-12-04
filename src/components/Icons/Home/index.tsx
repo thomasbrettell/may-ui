@@ -16,9 +16,10 @@ const Home = ({ size = 'md', color }: IconProps) => {
       >
         <path
           fill='currentColor'
-          d='M3 9.803c0-.502.25-.97.668-1.248l7.5-5a1.5 1.5 0 011.664 0l7.5 5A1.5 1.5 0 0121 9.803V19.5a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 19.5V9.803z'
+          fillRule='evenodd'
+          d='M3.668 8.555A1.5 1.5 0 003 9.803V19.5A1.5 1.5 0 004.5 21H9v-6a3 3 0 116 0v6h4.5a1.5 1.5 0 001.5-1.5V9.803a1.5 1.5 0 00-.668-1.248l-7.5-5a1.5 1.5 0 00-1.664 0l-7.5 5z'
+          clipRule='evenodd'
         ></path>
-        <path fill='none' d='M9 15a3 3 0 116 0v6H9v-6z'></path>
       </svg>
     </IconBox>
   );
