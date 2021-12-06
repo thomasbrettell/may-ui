@@ -4,7 +4,6 @@ import { ButtonProps } from './types';
 export const Button = styled.button<ButtonProps>`
   line-height: 133.33333333333333%;
   letter-spacing: 0.4px;
-  font-family: Inter;
   font-size: 0.75rem;
   border-radius: 4px;
   font-weight: bold;
@@ -114,6 +113,10 @@ export const Button = styled.button<ButtonProps>`
           &:focus {
             outline: 3px solid ${props.theme.colors.yellow[20]};
           }
+
+          &:active {
+            background-color: ${props.theme.colors.yellow[90]};
+          }
         `;
       case 'danger':
         return `
@@ -130,6 +133,10 @@ export const Button = styled.button<ButtonProps>`
 
           &:focus {
             outline: 3px solid ${props.theme.colors.red[20]};
+          }
+
+          &:active {
+            background-color: ${props.theme.colors.red[90]};
           }
       `;
     }
