@@ -66,7 +66,7 @@ const AllColors = () => {
 };
 
 export default {
-  title: 'Colors/All',
+  title: 'Colors',
   component: AllColors,
 } as ComponentMeta<typeof AllColors>;
 

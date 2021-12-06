@@ -1,11 +1,12 @@
-import More from './More';
+import Trash from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const Story = {
-  component: More,
-} as ComponentMeta<typeof More>;
+  component: Trash,
+  title: 'Icons/Trash'
+} as ComponentMeta<typeof Trash>;
 
-const Template: ComponentStory<typeof More> = (args) => <More {...args} />;
+const Template: ComponentStory<typeof Trash> = (args) => <Trash {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

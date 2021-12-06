@@ -1,10 +1,11 @@
-import Button from './Button';
+import Button from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const ButtonStory = {
   args: {
     disabled: false,
   },
+  title: 'Button',
   component: Button,
 } as ComponentMeta<typeof Button>;
 

@@ -1,11 +1,12 @@
-import Check from './Check';
+import Close from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const CloseStory = {
-  component: Check,
-} as ComponentMeta<typeof Check>;
+  component: Close,
+  title: 'Icons/Close'
+} as ComponentMeta<typeof Close>;
 
-const Template: ComponentStory<typeof Check> = (args) => <Check {...args} />;
+const Template: ComponentStory<typeof Close> = (args) => <Close {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

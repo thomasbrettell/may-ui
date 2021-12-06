@@ -1,8 +1,9 @@
-import ChevronDown from './ChevronDown';
+import ChevronDown from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const ChevronDownStory = {
   component: ChevronDown,
+  title: 'Icons/ChevronDown'
 } as ComponentMeta<typeof ChevronDown>;
 
 const Template: ComponentStory<typeof ChevronDown> = (args) => <ChevronDown {...args} />;

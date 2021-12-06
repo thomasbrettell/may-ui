@@ -1,11 +1,12 @@
-import Add from './Add';
+import Home from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const Story = {
-  component: Add,
-} as ComponentMeta<typeof Add>;
+  component: Home,
+  title: 'Icons/Home'
+} as ComponentMeta<typeof Home>;
 
-const Template: ComponentStory<typeof Add> = (args) => <Add {...args} />;
+const Template: ComponentStory<typeof Home> = (args) => <Home {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

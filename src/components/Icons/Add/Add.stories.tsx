@@ -1,11 +1,12 @@
-import Avatar from './Avatar';
+import Add from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const Story = {
-  component: Avatar,
-} as ComponentMeta<typeof Avatar>;
+  component: Add,
+  title: 'Icons/Add'
+} as ComponentMeta<typeof Add>;
 
-const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
+const Template: ComponentStory<typeof Add> = (args) => <Add {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

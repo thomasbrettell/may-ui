@@ -1,8 +1,9 @@
-import Edit from './Edit';
+import Edit from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const EditStory = {
   component: Edit,
+  title: 'Icons/Edit'
 } as ComponentMeta<typeof Edit>;
 
 const Template: ComponentStory<typeof Edit> = (args) => <Edit {...args} />;

@@ -1,8 +1,9 @@
-import Play from './Play';
+import Play from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 const Story = {
   component: Play,
+  title: 'Icons/Play'
 } as ComponentMeta<typeof Play>;
 
 const Template: ComponentStory<typeof Play> = (args) => <Play {...args} />;
