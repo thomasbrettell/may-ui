@@ -1,3 +1,6 @@
 export interface InputProps {
-  label: string;
+  error?: string;
+  placeholder?: string;
+  type?: 'text' | 'number' | 'email';
+  disabled?: boolean;
 }

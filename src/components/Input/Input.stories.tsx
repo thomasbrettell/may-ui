@@ -3,8 +3,6 @@ import Input from '.';
 
 export default {
   args: {
-    label: 'Default',
-    placeholder: 'placeholder',
     type: 'text',
   },
   title: 'Input',
