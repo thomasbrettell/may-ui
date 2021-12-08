@@ -51,7 +51,11 @@ export const Select = styled.select<SelectProps>`
   }
 `;
 
-export const Wrapper = styled.div`
+export const SelectWrapper = styled.div`
+  position: relative;
+`;
+
+export const Container = styled.div`
   width: 100%;
   position: relative;
 `;
@@ -62,4 +66,9 @@ export const ChevronWrapper = styled.div`
   transform: translateY(-50%);
   display: flex;
   right: 0.5rem;
+`;
+
+export const Error = styled.div`
+  margin-top: 5px;
+  color: ${(p) => p.theme.colors.red[50]};
 `;
