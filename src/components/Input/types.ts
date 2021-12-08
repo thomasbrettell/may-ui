@@ -3,4 +3,5 @@ export interface InputProps {
   placeholder?: string;
   type?: 'text' | 'number' | 'email';
   disabled?: boolean;
+  value?: string;
 }

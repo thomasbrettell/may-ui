@@ -12,13 +12,16 @@ export default {
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+  value: 'Value',
+};
 
-export const Placeholder = Template.bind({})
+export const Placeholder = Template.bind({});
 Placeholder.args = {
-  placeholder: 'Placeholder'
-}
+  placeholder: 'Placeholder',
+};
 
-export const Error = Template.bind({})
+export const Error = Template.bind({});
 Error.args = {
-  error: 'Error message'
-}
+  error: 'Error message',
+};

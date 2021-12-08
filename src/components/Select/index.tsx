@@ -13,9 +13,9 @@ const Select: FC<SelectProps> = (props) => {
   const { children, placeholder, error, disabled } = props;
   return (
     <Container>
-      <SelectWrapper>
+      <SelectWrapper disabled={disabled}>
         <Box placeholder={placeholder} error={error} disabled={disabled}>
-          {placeholder && <option value=''>{placeholder}</option>}
+          {placeholder && <option value="">{placeholder}</option>}
           {children}
         </Box>
         <ChevronWrapper>
