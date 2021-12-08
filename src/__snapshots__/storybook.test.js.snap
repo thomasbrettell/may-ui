@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button Danger 1`] = `null`;
+
+exports[`Storyshots Button Primary 1`] = `null`;
+
+exports[`Storyshots Button Secondary 1`] = `null`;
+
+exports[`Storyshots Button Tertiary 1`] = `null`;
+
+exports[`Storyshots Button Warning 1`] = `null`;
+
+exports[`Storyshots Colors All 1`] = `null`;
+
+exports[`Storyshots Icons/Add Default 1`] = `null`;
+
+exports[`Storyshots Icons/Avatar Default 1`] = `null`;
+
+exports[`Storyshots Icons/CaretDown Default 1`] = `null`;
+
+exports[`Storyshots Icons/Check Default 1`] = `null`;
+
+exports[`Storyshots Icons/ChevronDown Default 1`] = `null`;
+
+exports[`Storyshots Icons/Close Default 1`] = `null`;
+
+exports[`Storyshots Icons/Edit Default 1`] = `null`;
+
+exports[`Storyshots Icons/Home Default 1`] = `null`;
+
+exports[`Storyshots Icons/Image Default 1`] = `null`;
+
+exports[`Storyshots Icons/More Default 1`] = `null`;
+
+exports[`Storyshots Icons/Play Default 1`] = `null`;
+
+exports[`Storyshots Icons/Trash Default 1`] = `null`;
+
+exports[`Storyshots Input Default 1`] = `null`;
+
+exports[`Storyshots Input Error 1`] = `null`;
+
+exports[`Storyshots Input Placeholder 1`] = `null`;
+
+exports[`Storyshots Select Default 1`] = `null`;
