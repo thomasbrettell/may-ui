@@ -45,13 +45,12 @@ const AllColors = () => {
   return (
     <>
       {Object.keys(theme.colors).map((colorGroup) => {
-        console.log(theme.colors[colorGroup]);
         return (
           <div key={colorGroup} style={{ marginBottom: '50px' }}>
             <strong style={{ marginBottom: '10px', display: 'block' }}>{colorGroup[0].toUpperCase() + colorGroup.slice(1)}</strong>
             <div style={{ display: 'flex' }}>
               {Object.keys(theme.colors[colorGroup]).map((color) => (
-                <ColorBox hex={theme.colors[colorGroup][color]}>
+                <ColorBox key={color} hex={theme.colors[colorGroup][color]}>
                   <strong>{color}</strong>
                   <br />
                   {theme.colors[colorGroup][color]}

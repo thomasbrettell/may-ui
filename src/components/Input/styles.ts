@@ -64,7 +64,6 @@ export const Wrapper = styled.div<InputProps>`
       `;
     }
     return `
-
       &:hover {
         border-color: ${p.theme.colors.purple[50]};
       }
@@ -76,25 +75,10 @@ export const Wrapper = styled.div<InputProps>`
       if (!p.error) {
         return `
           border-color: ${p.theme.colors.purple[50]};
-          &:after {
-            display: block;
-          }
+          box-shadow: ${p.theme.colors.purple[10]} 0px 0px 0px 3px;
         `;
       }
     }}
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -3px;
-    left: -3px;
-    z-index: -1;
-    border-radius: 5px;
-    border: 3px solid ${(p) => p.theme.colors.purple[10]};
-    display: none;
   }
 `;
 
