@@ -9,6 +9,7 @@ export const Button = styled.button<ButtonProps>`
   font-weight: bold;
   padding: 8px 16px;
   border: none;
+  font-family: inherit;
 
   &:hover {
     cursor: pointer;
