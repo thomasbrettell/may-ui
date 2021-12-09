@@ -51,8 +51,20 @@ export const Select = styled.select<SelectProps>`
   }
 `;
 
-export const SelectWrapper = styled.div`
+interface SelectWrapperProps {
+  disabled?: boolean;
+}
+
+export const SelectWrapper = styled.div<SelectWrapperProps>`
   position: relative;
+
+  ${(p) => {
+    if (p.disabled) {
+      return `
+        color: ${p.theme.colors.ink[30]};      
+      `;
+    }
+  }}
 `;
 
 export const Container = styled.div`

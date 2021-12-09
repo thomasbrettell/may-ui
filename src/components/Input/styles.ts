@@ -17,6 +17,7 @@ export const Input = styled.input<InputProps>`
   ${(p) => {
     if (p.disabled) {
       return `
+        color: ${p.theme.colors.ink[30]};
         cursor: not-allowed;
       `;
     }
