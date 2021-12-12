@@ -1,6 +1,8 @@
 import Button from './components/Button';
 import ChevronDown from './components/Icons/ChevronDown';
 import Select from './components/Select';
+import Input from './components/Input';
+import Textarea from './components/Textarea';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <option value='mercedes'>Mercedes</option>
         <option value='audi'>Audi</option>
       </Select>
+      <Input value='awesome' />
+      <Textarea />
     </div>
   );
 }

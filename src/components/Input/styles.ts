@@ -13,6 +13,7 @@ export const Input = styled.input<InputProps>`
   min-width: 0px;
   appearance: none;
   font-family: inherit;
+  font-size: 1rem;
 
   ${(p) => {
     if (p.disabled) {

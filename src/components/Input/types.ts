@@ -4,4 +4,5 @@ export interface InputProps {
   type?: 'text' | 'number' | 'email';
   disabled?: boolean;
   value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
