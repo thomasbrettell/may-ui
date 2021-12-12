@@ -4,5 +4,6 @@ export interface ButtonProps {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   leftIcon?: React.ReactElement;
   rightIcon?: React.ReactElement;
-  iconGap?: number
+  iconGap?: number;
+  iconButton?: boolean;
 }

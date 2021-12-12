@@ -7,7 +7,7 @@ export const Button = styled.button<ButtonProps>`
   font-size: 0.75rem;
   border-radius: 4px;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: ${(p) => (p.iconButton ? '8px' : '8px 16px')};
   border: none;
   font-family: inherit;
   display: inline-flex;
@@ -74,7 +74,6 @@ export const Button = styled.button<ButtonProps>`
         `;
       case 'tertiary':
         return `
-          padding: 8px 16px;
           background: none;
           color: ${props.theme.colors.purple[50]};
           font-size: 12px;

@@ -1,6 +1,7 @@
 import Button from '.';
 import Home from '../Icons/Home';
 import Check from '../Icons/Check';
+import Close from '../Icons/Close';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
@@ -53,4 +54,10 @@ export const WithRightIcon = Template.bind({});
 WithRightIcon.args = {
   children: 'Right Icon',
   rightIcon: <Check />,
+};
+
+export const IconButton = Template.bind({});
+IconButton.args = {
+  rightIcon: <Close />,
+  variant: 'secondary',
 };

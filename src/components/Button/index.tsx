@@ -12,21 +12,34 @@ const Button: FC<ButtonProps> = ({
   iconGap = 5,
   ...props
 }) => {
+  const isIconButton = () => {
+    return !!(!children && (rightIcon || leftIcon));
+  };
+
   const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     onClick && onClick(e);
   };
 
   return (
-    <Box {...props} variant={variant} onClick={clickHandler}>
+    <Box
+      {...props}
+      variant={variant}
+      onClick={clickHandler}
+      iconButton={isIconButton()}
+    >
       {leftIcon && (
-        <ButtonIcon gap={`margin-right: ${iconGap}px`}>
-          {cloneElement(leftIcon, { size: 'sm' })}
+        <ButtonIcon gap={`margin-right: ${isIconButton() ? 0 : iconGap}px`}>
+          {cloneElement(leftIcon, {
+            size: leftIcon.props.size ? leftIcon.props.size : 'sm',
+          })}
         </ButtonIcon>
       )}
       {children}
       {rightIcon && (
-        <ButtonIcon gap={`margin-left: ${iconGap}px`}>
-          {cloneElement(rightIcon, { size: 'sm' })}
+        <ButtonIcon gap={`margin-left: ${isIconButton() ? 0 : iconGap}px`}>
+          {cloneElement(rightIcon, {
+            size: rightIcon.props.size ? rightIcon.props.size : 'sm',
+          })}
         </ButtonIcon>
       )}
     </Box>
