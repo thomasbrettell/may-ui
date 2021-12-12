@@ -1,7 +1,9 @@
 import Button from '.';
+import Home from '../Icons/Home';
+import Check from '../Icons/Check';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-const ButtonStory = {
+export default {
   args: {
     disabled: false,
   },
@@ -41,4 +43,14 @@ Danger.args = {
   variant: 'danger',
 };
 
-export default ButtonStory;
+export const WithLeftIcon = Template.bind({});
+WithLeftIcon.args = {
+  children: 'Left Icon',
+  leftIcon: <Home />,
+};
+
+export const WithRightIcon = Template.bind({});
+WithRightIcon.args = {
+  children: 'Right Icon',
+  rightIcon: <Check />,
+};
