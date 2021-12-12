@@ -12,6 +12,7 @@ export const Textarea = styled.textarea<TextareaProps>`
   border: 1px solid ${(p) => p.theme.colors.neutral[60]};
   border-radius: 4px;
   font-size: 1rem;
+  resize: ${(p) => p.resize};
 
   ${(p) => {
     if (p.error) {

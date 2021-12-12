@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useState } from 'react';
+import { ChangeEvent, FC } from 'react';
 import { InputProps } from './types';
 import { Input as Box, Wrapper, Error } from './styles';
 
@@ -10,9 +10,7 @@ const Input: FC<InputProps> = ({
   onChange,
   ...props
 }) => {
-  const [selfValue, setSelfValue] = useState(value);
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    setSelfValue(e.target.value);
     onChange && onChange(e);
   };
 
@@ -23,7 +21,7 @@ const Input: FC<InputProps> = ({
           error={error}
           type={type}
           disabled={disabled}
-          value={selfValue}
+          value={value}
           onChange={changeHandler}
           {...props}
         />

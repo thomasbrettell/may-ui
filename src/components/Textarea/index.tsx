@@ -1,6 +1,6 @@
 import { Textarea as Box, Error } from './styles';
 import { TextareaProps } from './types';
-import { ChangeEvent, FC, useState } from 'react';
+import { ChangeEvent, FC } from 'react';
 
 const Textarea: FC<TextareaProps> = ({
   value,
@@ -8,11 +8,10 @@ const Textarea: FC<TextareaProps> = ({
   disabled,
   placeholder,
   onChange,
+  resize = 'none',
   ...props
 }) => {
-  const [selfValue, setSelfVaue] = useState(value);
   const changeHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setSelfVaue(e.target.value);
     onChange && onChange(e);
   };
 
@@ -20,10 +19,12 @@ const Textarea: FC<TextareaProps> = ({
     <div>
       <Box
         placeholder={placeholder}
-        value={selfValue}
+        value={value}
         disabled={disabled}
         error={error}
         onChange={changeHandler}
+        resize={resize}
+        {...props}
       />
       {error && <Error>{error}</Error>}
     </div>
