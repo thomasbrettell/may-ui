@@ -10,8 +10,8 @@ const CaretDown: FC<IconProps> = ({ size = 'md', color }) => {
     <IconBox color={color}>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        width={theme.size.icon[size]}
-        height={theme.size.icon[size]}
+        width={theme.size.default[size]}
+        height={theme.size.default[size]}
         fill='none'
         viewBox='0 0 24 24'
       >

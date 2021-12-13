@@ -11,12 +11,10 @@ function App() {
     setInputValue(e.target.value);
   };
 
-  console.log(inputValue);
-
   return (
     <div className='App'>
       <Button variant='secondary'>Default</Button>
-      <ChevronDown size='lg' />
+      <ChevronDown size='sm' />
       <Select>
         <option value='volvo'>Volvo</option>
         <option value='saab'>Saab</option>

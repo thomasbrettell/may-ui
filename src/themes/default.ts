@@ -18,7 +18,7 @@ const defaultTheme: DefaultTheme = {
       60: '#D5D8DF',
       50: '#F2F3F5',
       40: '#FAFBFC',
-      white: '#FFF',
+      white: '#FFFFFF',
     },
     ink: {
       70: '#000000',
@@ -62,12 +62,13 @@ const defaultTheme: DefaultTheme = {
     },
   },
   size: {
-    icon: {
-      'sm': 16,
-      'md': 24,
-      'lg': 32
-    }
-  }
+    default: {
+      sm: 16,
+      md: 24,
+      lg: 32,
+      xl: 40,
+    },
+  },
 };
 
 export default defaultTheme;
