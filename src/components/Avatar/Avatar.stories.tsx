@@ -2,9 +2,7 @@ import Avatar from '.';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
-  args: {
-    color: 'red',
-  },
+  args: {},
   argTypes: {
     color: {
       options: ['purple', 'neutral', 'ink', 'red', 'green', 'yellow'],

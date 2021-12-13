@@ -7,10 +7,11 @@ const Avatar: FC<AvatarProps> = ({
   text,
   size = 'lg',
   color = 'purple',
+  isPartOfGroup,
   ...props
 }) => {
   return (
-    <Box size={size} color={color}>
+    <Box size={size} color={color} isPartOfGroup={isPartOfGroup}>
       {src && <Image alt='Avatar' src={src} {...props} />}
       {!src && (
         <Text bgColor={color} size={size}>

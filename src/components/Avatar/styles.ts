@@ -11,6 +11,14 @@ export const Avatar = styled.span<AvatarProps>`
   width: ${(p) => p.size && p.theme.size.default[p.size]}px;
   height: ${(p) => p.size && p.theme.size.default[p.size]}px;
   background: ${(p) => p.color && p.theme.colors[p.color][50]};
+  ${(p) => {
+    if (p.isPartOfGroup) {
+      return `
+        border: 2px solid white;
+        margin-left: -${p.theme.size.default[p.size || 'lg'] / 4}px;
+      `;
+    }
+  }}
 `;
 
 export const Image = styled.img`
@@ -34,7 +42,9 @@ export const Text = styled.span<TextProps>`
   white-space: nowrap;
   user-select: none;
   color: ${(p) =>
-    colorIsLightOrDark(p.theme.colors[p.bgColor][50]) ? 'black' : 'white'};
+    colorIsLightOrDark(p.theme.colors[p.bgColor][50])
+      ? p.theme.colors.ink[40]
+      : 'white'};
   text-transform: uppercase;
   font-weight: 600;
   font-size: ${(p) =>
