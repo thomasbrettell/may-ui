@@ -31,6 +31,7 @@ export const Track = styled.span<SwitchProps>`
   background: ${(p) => p.theme.colors.neutral[60]};
   border-radius: 9999px;
   transition: background 0.2s ease-in-out;
+  overflow: hidden;
 
   ${(p) =>
     p.isChecked &&
@@ -45,19 +46,25 @@ export const Track = styled.span<SwitchProps>`
   }
 `;
 
-export const Thumb = styled.span<SwitchProps>`
+export const Thumb = styled.span`
   height: 1.5rem;
   width: 1.5rem;
   background: white;
   transition: transform 0.1s ease;
-  border-radius: inherit;
+  border-radius: 9999px;
   user-select: none;
   pointer-events: none;
   overflow: hidden;
+`;
+
+export const TrackWrapper = styled.div<SwitchProps>`
+  display: flex;
+  transform: translateX(calc(-3rem + 1.5rem));
+  transition: transform 0.1s ease;
 
   ${(p) =>
     p.isChecked &&
     `
-    transform: translateX(calc(3rem - 1.5rem));
+    transform: translateX(0);
   `}
 `;
