@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { ChangeEvent, FC } from "react";
 import { Label, Input, Track, Thumb, TrackWrapper } from "./styles";
 import Check from "../Icons/Check";
+import { SwitchProps } from "./types";
 
-const Switch = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  const changeHandler = () => {
-    setIsChecked(!isChecked);
+const Switch: FC<SwitchProps> = ({ isChecked, onChange }) => {
+  const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    onChange && onChange(e);
   };
 
   return (
     <Label>
       <Track isChecked={isChecked}>
-        <Input type="checkbox" onChange={changeHandler} />
+        <Input type="checkbox" onChange={changeHandler} checked={isChecked} />
         <TrackWrapper isChecked={isChecked}>
           <Check color="white" />
           <Thumb />
